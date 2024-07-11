@@ -2,9 +2,11 @@
 
 import { ComponentType } from 'react';
 import Navbar from '../components/Navbar';
+import PageTitle from '../components/PageTitle';
 
 export const withNavbar = <P extends object>(
-  WrappedPageComponent: ComponentType<P>
+  WrappedPageComponent: ComponentType<P>,
+  title:string
 ) => {
   return (props: P) => {
     return (
@@ -17,6 +19,7 @@ export const withNavbar = <P extends object>(
             { src: '/page3', children: 'page 3' },
           ]}
         />
+        <PageTitle title={title}/>
         <WrappedPageComponent {...(props as P)} />
       </>
     );

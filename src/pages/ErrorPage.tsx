@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Button } from '../components/Button';
+import { withNavbar } from '../Layout/withNavbar';
 
 const ErrorPage: React.FC = () => {
   return (
@@ -21,4 +22,4 @@ const ErrorPage: React.FC = () => {
   );
 };
 
-export default ErrorPage
+export default withNavbar(ErrorPage, 'Error 404 ��');

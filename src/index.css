@@ -18,8 +18,11 @@ code {
     monospace;
 }
 
-@layer components {
-  .carousel {
-    @apply snap-always snap-mandatory snap-start;
+@layer components{
+  .underline-dotted{
+    text-decoration: underline dotted;
+  }
+  .carousel{
+    @apply snap-always snap-mandatory snap-start
   }
 }
