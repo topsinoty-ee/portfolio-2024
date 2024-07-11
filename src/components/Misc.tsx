@@ -46,5 +46,11 @@ export const Tooltip: React.FC<TooltipConfig> = ({
         </a>
       </span>
     );
+    } else {
+      return (
+        <span className="tooltip inline-flex flex" data-tip={description || 'not set'}>
+          <strong>{children}</strong>
+        </span>
+      );
   }
 };
