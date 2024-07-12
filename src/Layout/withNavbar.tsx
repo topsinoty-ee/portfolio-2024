@@ -14,9 +14,7 @@ export const withNavbar = <P extends object>(
         <Navbar
           navlinks={[
             { src: '/', children: 'home' },
-            { src: '/page', children: 'page' },
-            { src: '/page2', children: 'page 2' },
-            { src: '/page3', children: 'page 3' },
+            { src: 'https://github.com/topsinoty-ee/portfolio-2024', children: 'View the repo' },
           ]}
         />
         <PageTitle title={title}/>

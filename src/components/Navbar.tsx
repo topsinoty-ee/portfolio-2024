@@ -10,7 +10,7 @@ interface NavbarProps {
 }
 const Navbar: React.FC<NavbarProps> = ({ navlinks }) => {
   return (
-    <header className="navbar bg-base-200 items-center ease-in duration-300 transition-all top-0 z-[999] sticky max-h-[10vh]">
+    <header className="navbar bg-base-200 items-center ease-in duration-300 transition-all top-0 z-[999] sticky h-[10vh]">
       <div className="flex-1">
         <NavLink to={navlinks[0].src}>
           <Logo logoSrc={logo} className='h-10'/>

@@ -11,6 +11,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  width: 100%;
 }
 
 code {
@@ -18,11 +20,11 @@ code {
     monospace;
 }
 
-@layer components{
-  .underline-dotted{
+@layer components {
+  .underline-dotted {
     text-decoration: underline dotted;
   }
-  .carousel{
-    @apply snap-always snap-mandatory snap-start
+  .carousel {
+    @apply snap-always snap-mandatory snap-start;
   }
 }
