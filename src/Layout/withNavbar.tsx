@@ -2,9 +2,11 @@
 
 import { ComponentType } from 'react';
 import Navbar from '../components/Navbar';
+import PageTitle from '../components/PageTitle';
 
 export const withNavbar = <P extends object>(
-  WrappedPageComponent: ComponentType<P>
+  WrappedPageComponent: ComponentType<P>,
+  title:string
 ) => {
   return (props: P) => {
     return (
@@ -12,11 +14,10 @@ export const withNavbar = <P extends object>(
         <Navbar
           navlinks={[
             { src: '/', children: 'home' },
-            { src: '/page', children: 'page' },
-            { src: '/page2', children: 'page 2' },
-            { src: '/page3', children: 'page 3' },
+            { src: 'https://github.com/topsinoty-ee/portfolio-2024', children: 'View the repo' },
           ]}
         />
+        <PageTitle title={title}/>
         <WrappedPageComponent {...(props as P)} />
       </>
     );

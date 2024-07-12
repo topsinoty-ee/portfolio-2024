@@ -3,16 +3,17 @@
 import { NavLink } from 'react-router-dom';
 import { Logo } from './Logo';
 import NavLinks, { NavlinkProp } from './Navlinks';
+import logo from '../assets/images/logo512.png'
 
 interface NavbarProps {
   navlinks: NavlinkProp[];
 }
 const Navbar: React.FC<NavbarProps> = ({ navlinks }) => {
   return (
-    <header className="navbar bg-base-200 items-center ease-in duration-300 transition-all top-0 z-[999] sticky">
+    <header className="navbar bg-base-200 items-center ease-in duration-300 transition-all top-0 z-[999] sticky h-[10vh]">
       <div className="flex-1">
         <NavLink to={navlinks[0].src}>
-          <Logo />
+          <Logo logoSrc={logo} className='h-10'/>
         </NavLink>
       </div>
       <div className="flex-none">
