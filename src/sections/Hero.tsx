@@ -6,7 +6,8 @@ const Hero =()=>{
     return (
       <section
         id="#hero"
-        className="w-full p-6 flex flex-col justify-between h-[85vh] max-h-[90vh] carousel-item snap-start snap-always min-h-[550px]">
+        tabIndex={0}
+        className="w-full box-border p-6 flex flex-col justify-between h-[90vh] max-h-[90vh] carousel-item snap-start snap-always min-h-[550px]">
         {/* Hero */}
         <div className="flex flex-col gap-4 w-3/5 md:w-full  sm:w-full">
           {/* Text */}

@@ -28,3 +28,45 @@ code {
     @apply snap-always snap-mandatory snap-start;
   }
 }
+
+.flip-card {
+  perspective: 1000px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2rem);
+  -webkit-backdrop-filter: blur(2rem);
+  aspect-ratio: auto 1 / 1;
+}
+
+.flip-card-inner {
+  transition: transform 600ms;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+.soft-scroll{
+  scrollbar-width: none;
+  /* scrollbar-color: transparent transparent; */
+  -webkit-overflow-scrolling: touch;
+}
+.soft-scroll::scrollbar {
+  width: 0.1rem;
+}
+.soft-scroll::scrollbar-thumb {
+  @apply bg-base-100 hover:bg-base-200 duration-200 transition-transform transition-colors;
+}
+
+.soft-scroll:scrollbar-track {
+  @apply bg-base-300 hover:bg-base-100 duration-150 transition-transform transition-colors;
+}

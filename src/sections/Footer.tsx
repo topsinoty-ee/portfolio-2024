@@ -1,8 +1,4 @@
 const Footer =()=>{
-    return(
-        <footer>
-
-        </footer>
-    )
+    return <footer tabIndex={0}></footer>;
 }
 export default Footer
