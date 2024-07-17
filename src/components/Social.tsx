@@ -9,15 +9,15 @@ type SocialLogoColor = {
   [rest: string]: string;
 };
 
-type Logo = {
-  icon: React.ReactNode;
-  href: string;
+export type Icon = {
+  icon: React.ReactNode | React.ReactNode[];
+  href?: string;
   className?: string;
   [rest: string]: any;
 };
 
 interface SocialConfig extends Omit<TooltipConfig, 'children'> {
-  logo: Logo;
+  logo: Icon;
   title: string;
   font?: string;
   colors: SocialLogoColor;
@@ -45,14 +45,14 @@ const Social: React.FC<SocialConfig> = (props) => {
       </span>
       <div>
         <a
-          href={logo.href}
+          href={logo?.href}
           target="_blank"
           rel="noreferrer"
           className="cursor-pointer">
           <h2 style={{ color: primary }}>{title}</h2>
         </a>
         <Tooltip
-          href={logo.href}
+          href={logo?.href}
           {...props}>
           {/* If text-color is provided then use it from rest colors */}
           <span style={{ color: restColors.textColor || '' }}>

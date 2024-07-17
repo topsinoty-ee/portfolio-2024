@@ -5,6 +5,7 @@ import { Tooltip } from '../components/Misc';
 const Project = () => {
   return (
     <section
+      tabIndex={0}
       id="#projects"
       className="w-full flex justify-between h-[90vh] carousel-item snap-start snap-always">
       <div className="py-4 px-6 flex flex-col gap-5 w-full">
