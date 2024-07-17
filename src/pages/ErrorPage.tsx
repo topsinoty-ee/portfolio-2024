@@ -22,4 +22,4 @@ const ErrorPage: React.FC = () => {
   );
 };
 
-export default withNavbar(ErrorPage, 'Error 404 ��');
+export default withNavbar(ErrorPage, 'Seems like there\'s an error. Go back to my homepage https://topsinoty.vercel.app ', 'Oops...Error 404 ��');
