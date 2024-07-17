@@ -43,9 +43,21 @@ const SEO: React.FC<SEOProps> = ({
   url = 'https://topsinoty.vercel.app',
   image = 'https://topsinoty.vercel.app/static/media/logo512.41bfad14004363ef9131.png',
 }) => {
+      const isProduction = process.env.NODE_ENV === 'production';
   return (
     <Helmet>
       <title>{title}</title>
+      {isProduction ? (
+        <meta
+          name="robots"
+          content="index, follow"
+        />
+      ) : (
+        <meta
+          name="robots"
+          content="noindex"
+        />
+      )}
       <meta
         name="description"
         content={description}
