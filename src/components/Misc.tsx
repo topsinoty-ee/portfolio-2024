@@ -18,7 +18,7 @@ export const Tooltip: React.FC<TooltipConfig> = ({
   href,
   link,
   disabled,
-  iconColor
+  iconColor,
 }) => {
   if (href) {
     return (

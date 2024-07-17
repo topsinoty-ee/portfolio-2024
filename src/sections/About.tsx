@@ -233,7 +233,7 @@ const About: React.FC = () => {
     <section
       tabIndex={0}
       id="#about"
-      className="w-full flex justify-between h-[90vh] carousel-item snap-start snap-always">
+      className="w-full flex justify-between h-[90vh] carousel-item snap-start snap-always container">
       <div className="py-4 px-6 bg-base-300 w-3/5 flex flex-col gap-5">
         <h1 className="text-4xl font-semibold">About Me</h1>
         <div className="py-4">
