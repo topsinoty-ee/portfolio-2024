@@ -19,7 +19,7 @@ const Project: React.FC<ProjectProps> = ({
   repo,
 }) => {
   return (
-    <div className="relative container group h-full bg-base-200 w-2/3 carousel-item">
+    <div className="relative container group h-full bg-base-200 w-2/3 md:w-[95%] sm:w-[90%] sm:min-w-full sm:max-w-[360px] carousel-item">
       <img
         className="w-full aspect-video object-cover"
         src={src}
@@ -42,16 +42,16 @@ const Project: React.FC<ProjectProps> = ({
       <div className="absolute group-hover:bg-opacity-30 bottom-0 bg-base-300 bg-opacity-30 h-full w-full duration-700 transition-all peer"></div>
       <div className="absolute peer bottom-0 group-hover:bg-opacity-100 bg-base-300 bg-opacity-80 text-base-content w-full p-4  duration-700 transition-all cursor-pointer">
         <a href={`/projects/${title}`}>
-          <h3 className="font-bold">
+          <h3 className="font-bold text-xl md:text-2xl underline hover:underline-none">
             <a href={`/projects/${title}`}>{title}</a>
           </h3>
-          {description && <p>{description}</p>}
+          {description && <p className="text-lg md:text-xl sm:text-base">{description}</p>}
           {tags && (
             <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100">
               {tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-xs text-gray-500">
+                  className="text-xs md:text-sm text-gray-500">
                   #{tag}
                 </span>
               ))}

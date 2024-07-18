@@ -5,11 +5,10 @@ import { withNavbar } from '../Layout/withNavbar';
 import Hero from '../sections/Hero';
 import About from '../sections/About';
 import Project from '../sections/Projects';
+import useSmoothScroll from '../hooks/useSmoothScrolling';
 
 const Home = () => {
-  // useEffect(() => {
-  //   alert('This page is a work in progress!');
-  // }, []);
+  useSmoothScroll();
 
   return (
     <main className="carousel carousel-vertical h-[90vh] w-full">

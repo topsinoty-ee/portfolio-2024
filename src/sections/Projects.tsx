@@ -9,8 +9,8 @@ const Projects = () => {
   return (
     <section
       tabIndex={0}
-      id="#projects"
-      className="w-full flex justify-between h-[90vh] carousel-item snap-start snap-always container">
+      id="projects"
+      className="w-full flex justify-between h-[90vh] carousel-item snap-start snap-always">
       <div className="py-4 px-6 flex flex-col gap-5 w-full">
         <div className="flex flex-col gap-2">
           <h1 className="text-4xl font-semibold">My projects</h1>
