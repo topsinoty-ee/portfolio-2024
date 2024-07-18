@@ -32,7 +32,7 @@ const Social: React.FC<SocialConfig> = (props) => {
   return (
     <div
       style={{ backgroundColor: secondary }}
-      className="social rounded-sm flex px-4 py-3 gap-4 justify-start items-center max-w-52 border-2">
+      className="social rounded-sm flex px-4 py-3 sm:p-2 gap-4 justify-start items-center max-w-52 border-2">
       <a href={logo.href}>
         <IconContext.Provider
           value={{

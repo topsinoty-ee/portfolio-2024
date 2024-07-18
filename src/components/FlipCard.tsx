@@ -34,12 +34,8 @@ const FlipCard: React.FC<FlipCardConfig> = ({ front, children }) => {
           </div>
           <h2
             className={`text-lg font-bold max-h-[28px] ${
-              front.text.length > 8 ? 'sm:text-sm' : 'sm:text-lg'
-            }
-            
-            ${
-              front.text.length >10 ? 'md:text-3xl': 'md:text-4xl'
-            }`}>
+              front.text.length > 8 ? 'sm:text-xs' : 'sm:text-base'
+            } ${front.text.length > 10 ? 'md:text-xl' : 'md:text-2xl'}`}>
             {front.text}
           </h2>
         </div>
