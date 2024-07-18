@@ -32,8 +32,8 @@ const Social: React.FC<SocialConfig> = (props) => {
   return (
     <div
       style={{ backgroundColor: secondary }}
-      className="social rounded-sm flex px-4 py-3 gap-4 justify-start items-center max-w-52 border-2">
-      <span>
+      className="social rounded-sm flex px-4 py-3 sm:p-2 gap-4 justify-start items-center max-w-52 border-2">
+      <a href={logo.href}>
         <IconContext.Provider
           value={{
             className: logo.className || '',
@@ -42,8 +42,8 @@ const Social: React.FC<SocialConfig> = (props) => {
           }}>
           {logo.icon}
         </IconContext.Provider>
-      </span>
-      <div>
+      </a>
+      <div className="sm:hidden">
         <a
           href={logo?.href}
           target="_blank"
@@ -55,7 +55,9 @@ const Social: React.FC<SocialConfig> = (props) => {
           href={logo?.href}
           {...props}>
           {/* If text-color is provided then use it from rest colors */}
-          <span style={{ color: restColors.textColor || '' }}>
+          <span
+            className="sm:hidden"
+            style={{ color: restColors.textColor || '' }}>
             {username.length > 13
               ? `${username.substring(0, 10)}...`
               : username}

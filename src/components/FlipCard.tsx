@@ -23,7 +23,7 @@ const FlipCard: React.FC<FlipCardConfig> = ({ front, children }) => {
           <div className="flex gap-4">
             <IconContext.Provider
               value={{
-                className: `after:content-['+'] last-child:content-[''] ${
+                className: `sm:h-6 sm:w-6 md:h-10 md:w-10 aspect-square ${
                   front.icon.className || ''
                 }`,
                 style: { color: front.icon.color, ...front.icon.restColors },
@@ -32,7 +32,12 @@ const FlipCard: React.FC<FlipCardConfig> = ({ front, children }) => {
               {front.icon.icon}
             </IconContext.Provider>
           </div>
-          <h2 className="text-lg font-bold">{front.text}</h2>
+          <h2
+            className={`text-lg font-bold max-h-[28px] ${
+              front.text.length > 8 ? 'sm:text-xs' : 'sm:text-base'
+            } ${front.text.length > 10 ? 'md:text-xl' : 'md:text-2xl'}`}>
+            {front.text}
+          </h2>
         </div>
         <div className="flip-card-back absolute w-full h-full backface-hidden bg-base-content flex flex-col items-center justify-center transform rotate-180 transform-gpu">
           {children}

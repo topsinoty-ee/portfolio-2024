@@ -17,10 +17,10 @@ const Navbar: React.FC<NavbarProps> = ({ navlinks }) => {
         </NavLink>
       </div>
       <div className="flex-none">
-        <ul className="sm:hidden menu menu-vertical px-1">
+        <ul className="sm:hidden md:hidden menu menu-vertical px-1">
           <NavLinks navlinks={navlinks} />
         </ul>
-        <ul className="sm:block hidden menu menu-horizontal">
+        <ul className="sm:block md:block hidden menu menu-horizontal">
           <li>
             <details>
               <summary>Menu</summary>

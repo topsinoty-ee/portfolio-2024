@@ -233,12 +233,20 @@ const About: React.FC = () => {
   return (
     <section
       tabIndex={0}
-      id="#about"
-      className="w-full flex justify-between h-[90vh] carousel-item snap-start snap-always container">
-      <div className="py-4 px-6 bg-base-300 w-3/5 flex flex-col gap-5 overflow-auto">
-        <h1 className="text-4xl font-semibold">About Me</h1>
-        <div className="py-4">
-          <p className="text-lg w-4/5 leading-9 flex flex-col gap-6">
+      className="w-full flex justify-between h-[90vh] carousel-item sm:carousel md:carousel snap-start snap-always">
+      <div
+        id="about"
+        className="py-4 md:py-6 px-6 bg-base-300 w-3/5 sm:w-full md:w-full sm:carousel-item md:carousel-item flex flex-col gap-5 overflow-auto md:box-border box-border sm:box-border">
+        <h1 className="text-4xl font-semibold flex gap-2">
+          About Me{' '}
+          <a
+            href="#skills"
+            className="btn btn-ghost hidden sm:block md:block text-xl content-center">
+            {'>'}Skills
+          </a>
+        </h1>
+        <div className="py-4 box-border">
+          <p className="text-lg md:text-2xl w-4/5 sm:w-full md:leading-10 md:w-full  md:text-justify leading-9 flex flex-col gap-6">
             <span>
               I'm a passionate frontend developer crafting visually stunning and
               interactive websites✨. With a strong foundation in{' '}
@@ -286,9 +294,18 @@ const About: React.FC = () => {
           </p>
         </div>
       </div>
-      <div className="py-4 px-6 bg-base-100 w-2/5 flex flex-col gap-5">
-        <h1 className="text-4xl font-semibold">Skills</h1>
-        <div className="py-4 grid grid-cols-2 gap-4 overflow-auto modal-scroll soft-scroll">
+      <div
+        id="skills"
+        className="py-4 md:py-6 px-6 bg-base-100 w-2/5 flex flex-col gap-5 md:w-full sm:w-full md:carousel-item md:box-border sm:carousel-item sm:box-border">
+        <h1 className="text-4xl font-semibold flex gap-2">
+          Skills{' '}
+          <a
+            href="#about"
+            className="btn btn-ghost hidden sm:block md:block text-xl content-center">
+            {'<'}About
+          </a>
+        </h1>
+        <div className="py-4 grid grid-cols-2 md:grid-cols-3 sm:grid-cols-3 gap-4 overflow-auto modal-scroll soft-scroll">
           <Skills skills={skills} />
         </div>
       </div>
