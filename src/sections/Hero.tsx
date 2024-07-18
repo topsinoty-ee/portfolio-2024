@@ -9,14 +9,14 @@ const Hero = () => {
     <section
       id="hero"
       tabIndex={0}
-      className="w-full box-border p-6 flex flex-col justify-between h-[90vh] max-h-[90vh] carousel-item snap-start snap-always min-h-[660px] overflow-auto sm:max-h-[90vh] md:max-h-[90vh ] gap-6">
+      className="w-full box-border md:pb-10 p-6 flex flex-col justify-between h-[90vh] max-h-[90vh] carousel-item snap-start snap-always min-h-[660px] overflow-auto sm:max-h-[90vh] md:max-h-[90vh] gap-6">
       {/* Hero */}
       <div className="flex flex-col gap-4 md:gap-6 w-3/5 md:w-full sm:w-full">
         {/* Text */}
-        <h1 className="text-8xl sm:text-4xl">
+        <h1 className="text-8xl md:text-6xl sm:text-4xl">
           Hey! I'm Oluwatobiloba Promise Temitope.
         </h1>
-        <div className="w-full flex flex-col sm:gap-4 gap-2 text-3xl sm:text-base">
+        <div className="w-full flex flex-col md:gap-4 sm:gap-4 gap-2 text-3xl sm:text-base">
           {/* Add typewriter or carousel effect here and leave as gray text */}
           <p>
             Welcome to my personal website! I'm using{' '}
