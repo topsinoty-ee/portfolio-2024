@@ -9,7 +9,7 @@ const Hero = () => {
     <section
       id="hero"
       tabIndex={0}
-      className="w-full box-border md:pb-10 p-6 flex flex-col justify-between h-[90vh] max-h-[90vh] carousel-item snap-start snap-always min-h-[660px] overflow-auto sm:max-h-[90vh] md:max-h-[90vh] gap-6">
+      className="w-full box-border md:pb-10 p-6 flex flex-col justify-between h-[90vh] max-h-[90vh] carousel-item snap-start snap-always min-h-[90vh] overflow-auto sm:max-h-[90vh] md:max-h-[90vh] gap-6">
       {/* Hero */}
       <div className="flex flex-col gap-4 md:gap-6 w-3/5 md:w-full sm:w-full">
         {/* Text */}
